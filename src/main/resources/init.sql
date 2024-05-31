@@ -22,3 +22,10 @@ create table if not exists "order"
     count       int  not null,
     amount      int  not null
 );
+
+CREATE TABLE product_return (
+    id UUID PRIMARY KEY,
+    order_id UUID NOT NULL,
+    date TIMESTAMP NOT NULL,
+    quantity INT NOT NULL
+);
